@@ -1,0 +1,156 @@
+{
+  "info": {
+    "name": "Auction API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000/api",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": ["{{baseUrl}}"],
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Start Auction",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{baseUrl}}/auction/start",
+          "host": ["{{baseUrl}}"],
+          "path": ["auction", "start"]
+        }
+      }
+    },
+    {
+      "name": "Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/auction/status",
+          "host": ["{{baseUrl}}"],
+          "path": ["auction", "status"]
+        }
+      }
+    },
+    {
+      "name": "Bid $50",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"bid\": 5000}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/auction/bid",
+          "host": ["{{baseUrl}}"],
+          "path": ["auction", "bid"]
+        }
+      }
+    },
+    {
+      "name": "Bid $150",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"bid\": 15000}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/auction/bid",
+          "host": ["{{baseUrl}}"],
+          "path": ["auction", "bid"]
+        }
+      }
+    },
+    {
+      "name": "Custom Bid",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"bid\": 15000}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/auction/bid",
+          "host": ["{{baseUrl}}"],
+          "path": ["auction", "bid"]
+        }
+      }
+    },
+    {
+      "name": "History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/auction/history",
+          "host": ["{{baseUrl}}"],
+          "path": ["auction", "history"]
+        }
+      }
+    },
+    {
+      "name": "Finalize",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{baseUrl}}/auction/finalize",
+          "host": ["{{baseUrl}}"],
+          "path": ["auction", "finalize"]
+        }
+      }
+    }
+  ]
+}
